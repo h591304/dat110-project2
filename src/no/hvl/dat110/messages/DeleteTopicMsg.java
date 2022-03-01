@@ -7,7 +7,24 @@ public class DeleteTopicMsg extends Message {
 	// TODO:
 	// Implement object variables - a topic is required
 
+    private String topic;
+
 	// Constructor, get/set-methods, and toString method
 	// as described in the project text
 
+    public DeleteTopicMsg(String user, String topic) {
+        super(MessageType.DELETETOPIC, user);
+        this.topic = topic;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    @Override
+    public String toString() {
+        return "DeleteTopicMsg{" +
+                "topic='" + topic + '\'' +
+                '}';
+    }
 }
